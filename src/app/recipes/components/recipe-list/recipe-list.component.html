@@ -1,0 +1,4 @@
+<!-- <app-recipe-list *ngFor="let recipeEL of recipes$ |async" [Recipe]="recipeEl" ></app-recipe-list> -->
+<app-recipe *ngFor="let recipe of recipes$ |async" [inputRecipe]= "recipe" class="recipe-list">
+</app-recipe>
+

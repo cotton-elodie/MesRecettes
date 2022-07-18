@@ -1,0 +1,10 @@
+.recipe-card{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    &-img{
+        width: 25vw;
+        border-radius: 20px;
+        height: 15vh;
+    }
+}

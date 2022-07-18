@@ -1,0 +1,9 @@
+.header{
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: unset;
+
+ &-img{
+height: 50px;
+ }
+}

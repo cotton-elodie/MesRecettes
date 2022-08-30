@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { RecipeListComponent } from './recipes/components/recipe-list/recipe-list.component';
 import { RecipeComponent } from './recipes/components/recipe/recipe.component';
 import { RecipeDetailComponent } from './recipes/components/recipe-detail/recipe-detail.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 // import { RecipeBorderCardDirective } from './recipe-border-card.directive';
 
 @NgModule({
@@ -15,6 +16,7 @@ import { RecipeDetailComponent } from './recipes/components/recipe-detail/recipe
     RecipeListComponent,
     RecipeComponent,
     RecipeDetailComponent,
+    PageNotFoundComponent,
     //RecipeBorderCardDirective
   ],
   imports: [

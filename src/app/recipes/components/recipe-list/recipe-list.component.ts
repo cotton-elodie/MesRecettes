@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit, Input } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Recipe } from '../../recipe.model';
 import { RecipeService } from '../../recipe.service';
@@ -11,11 +10,12 @@ import { RecipeService } from '../../recipe.service';
 })
 export class RecipeListComponent implements OnInit {
 
-  recipes!: Recipe[];
+ //recipes!: Recipe[];
   recipes$!: Observable<Recipe[]>
+  // @Input() inputRecipe!: Recipe;
 
   constructor(
-    private recipeService : RecipeService
+    private recipeService: RecipeService,
   ) { }
 
   ngOnInit(): void {

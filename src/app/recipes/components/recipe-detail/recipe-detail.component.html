@@ -1,0 +1,30 @@
+<!-- <app-recipe-detail *ngIf="recipe$ | async as recipe" class="recipe-detail"> -->
+<!-- <app-recipe-detail> -->
+
+<div class="recipe-detail" *ngIf="recipe$ | async as recipe">
+  <h2>{{ recipe.recipe.title }}</h2>
+  <img [src]="recipe.recipe.thumbnail" />
+  <p>{{ recipe.recipe.difficulty }}</p>
+  <p>{{ recipe.recipe.description }}</p>
+  <h3>Ingredients :</h3>
+  <ul>
+    <li *ngFor="let ingredient of recipe.recipe.ingredients">
+      {{ ingredient.quantity }}
+      {{ ingredient.unit }}
+      {{ ingredient.name }}
+    </li>
+  </ul>
+
+  <h3>Instructions :</h3>
+  <ul>
+    <li *ngFor="let instruction of recipe.recipe.instructions">
+      {{ instruction }}
+    </li>
+   
+  </ul>
+  <nav>
+    <div>
+      <a href="#">Retour au recettes</a>
+    </div>
+  </nav>
+</div>

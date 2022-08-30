@@ -6,12 +6,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RecipeListComponent } from './recipes/components/recipe-list/recipe-list.component';
 import { RecipeComponent } from './recipes/components/recipe/recipe.component';
+import { RecipeDetailComponent } from './recipes/components/recipe-detail/recipe-detail.component';
+// import { RecipeBorderCardDirective } from './recipe-border-card.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     RecipeListComponent,
-    RecipeComponent
+    RecipeComponent,
+    RecipeDetailComponent,
+    //RecipeBorderCardDirective
   ],
   imports: [
     BrowserModule,

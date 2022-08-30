@@ -1,4 +1,6 @@
-<div class="recipe-card" >
+<!-- <app-recipe [inputRecipeDetail]= "recipeDetail"> </app-recipe> -->
+<div class="recipe-card" (click)="goDetailRecipe()" >
     <h2> {{ inputRecipe.title }} </h2>
-    <img class="recipe-card-img" [src]="inputRecipe.thumbnail"> 
+    <img class="recipe-card-img" [src]="inputRecipe.thumbnail">
+    <!-- <button (click)="goDetailRecipe()" >Voir la recette</button> -->
 </div>

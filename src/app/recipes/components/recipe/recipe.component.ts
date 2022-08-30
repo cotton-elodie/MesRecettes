@@ -1,8 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 import { Recipe } from '../../recipe.model';
-import { RecipeService } from '../../recipe.service';
 
 @Component({
   selector: 'app-recipe',
@@ -11,26 +9,26 @@ import { RecipeService } from '../../recipe.service';
 })
 export class RecipeComponent implements OnInit {
 
-  @Input() inputRecipe!:Recipe;
+  @Input() inputRecipe!: Recipe;
   
+
   // recipe!: Recipe|undefined;
-  recipe$!: Observable<Recipe>
-
-
+  //recipe$!: Observable<Recipe>
 
   constructor(
-    private recipeService: RecipeService,
-    private route : ActivatedRoute
+    private router: Router
 
-    
+
   ) { }
 
+
   ngOnInit(): void {
-   
-    
-    
+
   }
 
-  
+  goDetailRecipe() {
+    this.router.navigateByUrl(`recette/${this.inputRecipe.id}`);
+  }
+
 
 }

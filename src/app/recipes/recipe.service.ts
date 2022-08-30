@@ -1,14 +1,16 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { catchError, Observable, of, tap } from 'rxjs';
-import { Recipe } from './recipe.model';
+import { Recipe, RecipeItem } from './recipe.model';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RecipeService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient,
+              ) { }
 
   getRecipeList(): Observable<Recipe[]> {
     
@@ -19,8 +21,8 @@ export class RecipeService {
    
   }
 
-  getRecipeById(recipeId:number): Observable<Recipe>{
-    return this.http.get<Recipe>(`http://localhost:3001/recipe/${recipeId}`)
+  getRecipeById(recipeId:number): Observable<RecipeItem>{
+    return this.http.get<RecipeItem>(`http://localhost:3001/recipe/${recipeId}`)
   }
 
   private log(response: any){
@@ -31,4 +33,6 @@ export class RecipeService {
     console.error(error);
       return of(errorValue)
   }
+
+  
 }
